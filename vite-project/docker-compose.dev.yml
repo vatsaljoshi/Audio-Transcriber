@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  vite:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./audio-transcriber-frontend:/app
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    stdin_open: true
+    tty: true
+
+  # Alternative service for running one-off commands
+  node:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./audio-transcriber-frontend:/app
+    environment:
+      - NODE_ENV=development

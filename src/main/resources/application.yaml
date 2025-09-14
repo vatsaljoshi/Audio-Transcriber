@@ -1,0 +1,8 @@
+spring:
+  ai:
+    openai:
+      api-key: <openai_api_key>
+      base-url: https://api.openai.com
+      options:
+        model: whisper-1
+        response-format: json
