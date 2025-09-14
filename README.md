@@ -29,20 +29,20 @@ git clone https://github.com/your-username/audio-transcription-app.git
 cd audio-transcription-app
 ```
 
-2. Install dependencies
+### 2. Install dependencies
 
 If running locally (without Docker):
 ```
 npm install
 ```
 
-3. Run the app
+### 3. Run the app
 npm run dev
 
 
 The app will be available at: http://localhost:5173
 
-🐳 Running with Docker
+### 🐳 Running with Docker
 
 Build & start containers:
 
@@ -53,7 +53,9 @@ docker-compose up --build
 The app will be available at: http://localhost:5173
 
 
+
 📂 Project Structure
+```
 audio-transcription-app/
 ├── src/
 │   ├── App.jsx
@@ -65,9 +67,10 @@ audio-transcription-app/
 ├── docker-compose.yml
 ├── Dockerfile
 └── README.md
+```
 
 
-⚡ Improvements (Future Scope)
+### ⚡ Improvements (Future Scope)
 
 - Add backend (Node/Express or FastAPI) with real transcription support (e.g., OpenAI Whisper API)
 - Support multiple file formats (mp3, wav, etc.)
